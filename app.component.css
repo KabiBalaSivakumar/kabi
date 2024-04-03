@@ -1,0 +1,115 @@
+.first
+{
+    padding:0px;
+    margin-left: 100px;
+    display: inline-flex;
+    
+}
+.mid{
+    margin-left: 100px;
+    display:inline-flex;
+   
+}
+.last{
+    margin-left: 100px;
+    display:inline-flex;
+    
+
+}
+
+.input
+{
+    padding:0px;
+    display: inline-flex;
+}
+
+.DOB
+{
+    padding:0px;
+    margin-left: 100px;
+    margin-top: 50px;
+    display: block;
+}
+
+.mail
+{
+    padding:0px;
+    margin-left: 100px;
+    margin-top: 50px;
+    display: block;
+}
+.Contactnumber
+{
+    padding:0px;
+    margin-left: 100px;
+    margin-top: 50px;
+    display: block;
+}
+.spl{
+    color:red;
+    display: inline-flex;
+}
+.AlternateContactNumber
+{
+    padding:0px;
+    margin-left: 100px;
+    margin-top: 50px;
+    display: block;
+}
+.username
+{
+    padding:0px;
+    margin-left: 100px;
+    margin-top: 50px;
+    display: inline-flex ;
+}
+.password
+{
+    padding:0px;
+    margin-left: 100px;
+    display: inline-flex;
+}
+
+
+.submit
+{ 
+    display: block;
+    margin-left: 1000px;
+    margin-top: 50px;
+    
+    
+
+}
+.but{
+    padding:14px 30px;
+    font-size: 15px;
+    background-color: blueviolet;
+    color:white;
+}
+input.ng-invalid.ng-touched{
+     border:red 1px solid;
+}
+.err{
+    display: inline-flex;
+    margin-left:250px;
+  }
+  .err1{
+    display: inline-flex;
+    margin-left:200px;
+  }
+  .danger{
+    display: block;
+    color:red;
+  }
+  .form
+  {
+    margin-top:50px;
+    background-color: bisque;
+  }
+  #h{
+    text-align: center;
+    color:orangered;
+    background-color: blueviolet;
+  }
+  
+ 

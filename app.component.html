@@ -1,0 +1,97 @@
+<h1 id="h">REGISTER HERE!</h1>
+<div class="form">
+  <form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">
+  <div class="first">
+  <label >First Name </label>
+  <label class="spl">*:</label>
+  <input class="input" type="text" formControlName="firstname"/>
+ 
+
+    <div  class="danger" *ngIf="firstname.errors?.['required'] && (firstname.touched || firstname.dirty)">please enter first name</div>
+   
+    <div  class="danger"  *ngIf="firstname.errors?.['minlength'] &&(firstname.touched || firstname.dirty)">first name too short</div>
+    <div  class="danger"  *ngIf="firstname.errors?.['pattern']&&(firstname.dirty || firstname.touched)">start with only alphabets</div>
+    
+    
+
+<label class="mid">Middle Name: </label>
+  <input class="input" type="text" formControlName="middlename"/>
+      
+     <label class="last">Last Name </label>
+      <label class="spl" >*:</label>
+      <input  class="input" type="text" formControlName="lastname"/>
+      <div>
+      <span  style=color:red *ngIf="!reactiveForm.get('lastname').valid && reactiveForm.get('lastname').touched">please enter last name</span>
+    </div>
+    </div>
+    
+  <div class="DOB">
+    <label >DOB </label>
+    <label class="spl" >*:</label>
+    <input  type="date" formControlName="Dob"/>
+    <div>
+        <span style=color:red *ngIf="!reactiveForm.get('Dob').valid && reactiveForm.get('Dob').touched">DOB required</span>
+      </div>
+</div>
+  
+   <div class="mail">
+      <label  >Email:</label>
+      <label class="spl" >*:</label>
+      <input type="email"  formControlName="Email">
+      <div>
+      <span style=color:red *ngIf="!reactiveForm.get('Email').valid && reactiveForm.get('Email').touched">please enter valid email</span>
+    </div>
+    </div>
+      
+<div class="Contactnumber">
+      <label >Contact Number:</label>
+      <label class="spl" >*:</label>
+      <input type="text"  formControlName="Contactnumber">
+      <div>
+        <div  style="color:red" *ngIf="Contactnumber.errors?.['required'] && (Contactnumber.touched || Contactnumber.dirty)">Mobile number required</div>
+        <div  style="color:red" *ngIf="Contactnumber.errors?.['pattern'] && (Contactnumber.touched || Contactnumber.dirty)">Invalid number</div>
+        <div  style="color:red" *ngIf="Contactnumber.errors?.['minlength'] && (Contactnumber.touched || Contactnumber.dirty)">number is short</div>
+        <div  style="color:red" *ngIf="Contactnumber.errors?.['maxlength'] && (Contactnumber.touched || Contactnumber.dirty)">check your number</div>
+      </div>
+  </div>
+  <div class="AlternateContactNumber">
+      <label >Alternate Contact Number:</label>
+      <input type="number"  formControlName="alternatecontactnumber">
+  </div>
+  <div class="username">
+      <label >User Name:</label>
+      <label class="spl" >*:</label>
+      <input type="text"  formControlName="username">
+      
+  </div>
+  
+  <div class="password">
+      <label >Password</label>
+      <label class="spl" >*:</label>
+      <input type="text"  formControlName="password">
+     
+      
+      
+  </div>
+  <div class="password">
+    <label >Confirm Password</label>
+    <label class="spl" >*:</label>
+    <input type="text"  formControlName="confirmpassword">
+    <div style="color:red" [ngStyle]="{'display': repeatpass}"> doesn't match</div>
+    
+</div>
+
+<div class="err1">
+    <span style=color:red *ngIf="!reactiveForm.get('username').valid && reactiveForm.get('username').touched">Username required</span>
+  </div>
+  <div class="err">
+    <div  style="color:red" *ngIf="password.errors?.['required'] && (password.touched || password.dirty)">password required</div>
+    <div  style="color:red" *ngIf="password.errors?.['minlength'] && (password.touched || password.dirty)">more than 8 characters required</div>
+    
+  </div>
+      
+ <div class="submit">
+      <button type="submit" class="but" >Submit</button>
+  </div>
+  </form>
+  </div> 
